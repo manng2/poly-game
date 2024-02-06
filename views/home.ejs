@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tailwind.config.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+
+<body>
+    <section class="px-16">
+        <div class="flex justify-center w-full mb-2">
+            <img src="assets/images/game-title.png" alt="polysport flip card"/>
+        </div>
+        <%- include('home/user-info') %>
+        <section class="flex">
+            <div>
+                <%- include('home/game-info') %>
+                <%- include('home/board') %>
+            </div>
+            <div>
+                <%- include('home/choose-nft') %>
+            </div>
+        </section>
+    </section>
+    <script src="../assets/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>
