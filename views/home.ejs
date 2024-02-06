@@ -14,20 +14,21 @@
 </head>
 
 <body>
-    <section class="px-16">
+    <section class="p-16">
         <div class="flex justify-center w-full mb-2">
             <img src="assets/images/game-title.png" alt="polysport flip card"/>
         </div>
         <%- include('home/user-info') %>
-        <section class="flex">
-            <div>
+        <section class="flex gap-8">
+            <div class="grow-[3]">
                 <%- include('home/game-info') %>
                 <%- include('home/board') %>
             </div>
-            <div>
+            <div class="grow-[2]">
                 <%- include('home/choose-nft') %>
             </div>
         </section>
+        <%- include('home/notification-dialog') %>
     </section>
     <script src="../assets/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>

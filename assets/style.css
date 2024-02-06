@@ -426,6 +426,34 @@ span.text-primary {
     height: 40px;
 }
 
+.pool-reward {
+    background: linear-gradient(0deg, #1A1B23, #1A1B23),
+        linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 91.69%);
+    border: 1px solid;
+
+    border-image-source: linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 91.69%);
+
+    border-radius: 16px;
+    padding: 20px 16px;
+}
+
+.notification-dialog {
+    background:
+        linear-gradient(142.41deg, rgba(40, 36, 230, 0.4) -12.51%, rgba(228, 15, 172, 0.4) 136.14%);
+    border: 7px solid;
+
+    border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
+
+
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    position: relative;
+}
+
 /** 
  *  Desktop
  */
@@ -433,6 +461,11 @@ span.text-primary {
     #card-game {
         width: 85px;
         height: 120px;
+    }
+
+    .notification-dialog {
+        width: 600px;
+        height: 600px;
     }
 }
 

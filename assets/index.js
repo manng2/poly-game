@@ -5,6 +5,7 @@ function init() {
       flipCard(this, "assets/images/player-card/player-1/big.png");
     });
   });
+  listenCloseButtonNotificationDialog();
 }
 
 init();
@@ -25,4 +26,34 @@ function flopCard(el) {
 
   cardGameInner.style.transform = "";
   cardGameBackImg.src = "";
+}
+
+function openWinDialog(img, total) {
+  document.getElementById("notification-dialog").classList.remove("hidden");
+  document.getElementById("notification-dialog").classList.add("flex");
+  document.getElementById("notification-dialog-title").innerText = 'Congratulations!';
+  document.getElementById("notification-dialog-player-card").src = img;
+  document.getElementById("notification-dialog-total").innerText = total;
+  document.body.style.overflow = "hidden";
+}
+
+function openLoseDialog(img, total) {
+  document.getElementById("notification-dialog").classList.remove("hidden");
+  document.getElementById("notification-dialog").classList.add("flex");
+  document.getElementById("notification-dialog-title").innerText = 'Better luck next time';
+  document.getElementById("notification-dialog-player-card").src = img;
+  document.getElementById("notification-dialog-total").innerText = total;
+  document.body.style.overflow = "hidden";
+}
+
+function closeNotificationDialog() {
+  document.getElementById("notification-dialog").classList.remove("flex");
+  document.getElementById("notification-dialog").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+function listenCloseButtonNotificationDialog() {
+  document.getElementById('notification-dialog-close-button').addEventListener('click', function() {
+    closeNotificationDialog();
+  })
 }
