@@ -57,3 +57,19 @@ function listenCloseButtonNotificationDialog() {
     closeNotificationDialog();
   })
 }
+
+function showWinNFT() {
+  const winNFTEl = document.getElementById('win-nft');
+  winNFTEl.style.display = 'block';
+  winNFTEl.style.opacity = .5;
+
+  const timeout = setInterval(() => {
+    if (winNFTEl.style.opacity < 1) {
+      console.log('move', winNFTEl.style.opacity);
+      winNFTEl.style.opacity = parseFloat(winNFTEl.style.opacity) + 0.1;
+    } else {
+      clearInterval(timeout);
+    }
+  }, 1000)
+  winNFTEl.play();
+}
