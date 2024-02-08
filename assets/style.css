@@ -474,7 +474,7 @@ span.text-primary {
 /** 
  *  Desktop
  */
-@media screen and (min-width: 1165px) {
+@media screen and (min-width: 1264px) {
     #card-game {
         width: 85px;
         height: 120px;
@@ -484,14 +484,37 @@ span.text-primary {
         width: 600px;
         height: 600px;
     }
+
+    .wrapper {
+        padding: 16px;
+    }
 }
+
+/** 
+ *  Tablet
+ */
+ /* @media screen and (max-width: 1264px) {
+    #card-game {
+        width: 70px;
+        height: 100px;
+    }
+
+    .notification-dialog {
+        width: 600px;
+        height: 600px;
+    }
+
+    .wrapper {
+        padding: 4px;
+    }
+} */
 
 /** 
  *  Mobile
  */
-@media screen and (max-width: 1164px) {
+@media screen and (max-width: 1264px) {
     #card-game {
-        width: 85px;
-        height: 120px;
+        width: 70x;
+        height: 100px;
     }
 }

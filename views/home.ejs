@@ -15,19 +15,30 @@
 
 <body>
     <section class="p-16">
+        <%- include('home/decor') %>
         <div class="flex justify-center w-full mb-2">
             <img src="assets/images/game-title.png" alt="polysport flip card"/>
         </div>
         <%- include('home/user-info') %>
-        <section class="flex gap-8">
-            <div class="grow-[3]">
-                <%- include('home/game-info') %>
+        <section class="flex desktop:gap-8 mobile:gap-2 mobile:flex-col desktop:flex-row">
+            <div class="grow-[3] overflow-auto">
+                <div class="mobile:hidden desktop:block">
+                    <%- include('home/game-info') %>
+                </div>
                 <%- include('home/board') %>
             </div>
-            <div class="grow-[2]">
-                <%- include('home/choose-nft') %>
+            <div class="grow-[2] my-0 -mx-12">
+                <div class="flex justify-center gap-2">
+                    <%- include('home/choose-nft') %>
+                    <div class="mobile:block desktop:hidden">
+                        <%- include('home/game-info') %>
+                    </div>
+                </div>
             </div>
         </section>
+        <div class="mobile:block desktop:hidden">
+            <%- include('home/pool-reward') %>
+        </div>
         <%- include('home/notification-dialog') %>
     </section>
     <video id="win-nft">
