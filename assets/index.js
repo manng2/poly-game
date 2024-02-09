@@ -125,3 +125,26 @@ function closeRankingDialog() {
   document.getElementById("overlay").classList.add("hidden");
   document.body.style.overflow = "auto";
 }
+
+function openHowToDialog() {
+  document.getElementById("overlay").classList.remove("hidden");
+  document.getElementById("overlay").classList.add("block");
+  document.getElementById("how-to-dialog").classList.remove("hidden");
+  document.getElementById("how-to-dialog").classList.add("block");
+  document.body.style.overflow = "hidden";
+
+  const listener = document.body.addEventListener('click', function(event) {
+    if (!document.getElementById('how-to-dialog').contains(event.target)) {
+      closeHowToDialog();
+      document.body.removeEventListener('click', listener);
+    }
+  })
+}
+
+function closeHowToDialog() {
+  document.getElementById("how-to-dialog").classList.remove("block");
+  document.getElementById("how-to-dialog").classList.add("hidden");
+  document.getElementById("overlay").classList.remove("block");
+  document.getElementById("overlay").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}

@@ -482,7 +482,7 @@ span.text-primary {
 
 #withdraw-dialog {
     background: linear-gradient(0deg, #1A1B23, #1A1B23),
-linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 91.69%);
+        linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 91.69%);
 
 }
 
@@ -528,12 +528,13 @@ linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 
     border: 1px solid rgba(185, 32, 237, 1);
 }
 
-#ranking-dialog {
+#ranking-dialog,
+#how-to-dialog {
     border: Mixed solid;
     border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
     border-radius: 8px;
     padding: 8px 16px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -541,12 +542,12 @@ linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 
 
 #ranking-dialog .table-wrapper {
     background:
-linear-gradient(142.41deg, rgba(40, 36, 230, 0.4) -12.51%, rgba(228, 15, 172, 0.4) 136.14%);
-border: 1px solid;
-border: none;
-border-radius: 24px;
+        linear-gradient(142.41deg, rgba(40, 36, 230, 0.4) -12.51%, rgba(228, 15, 172, 0.4) 136.14%);
+    border: 1px solid;
+    border: none;
+    border-radius: 24px;
 
-border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
+    border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
 }
 
 #overlay {
@@ -580,13 +581,35 @@ border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.how-to-item {
+    padding: 8px;
+    border-radius: 12px;
+    background:
+        linear-gradient(142.41deg, rgba(40, 36, 230, 0.4) -12.51%, rgba(228, 15, 172, 0.4) 136.14%);
+    border: 1px solid;
+    border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.how-to-item h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.how-to-item p {
+    font-size: 10px;
 }
 
 /** 
