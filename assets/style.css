@@ -47,15 +47,6 @@ button.carousel-control-next {
     }
 }
 
-#accordion-collapse button {
-    background:
-        linear-gradient(0deg, rgba(185, 32, 237, 0.2), rgba(185, 32, 237, 0.2)) !important;
-}
-
-#accordion-collapse h2 {
-    margin-bottom: 12px;
-}
-
 .button-connect-wallet {
     background:
         linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
@@ -648,4 +639,18 @@ input[type=number] {
         height: 100%;
         object-fit: fill;
     }
+}
+
+* div::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+* div::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+* div::-webkit-scrollbar-thumb {
+    background-color: rgba(147, 30, 128, .5);
+    border-radius: 20px;
 }
