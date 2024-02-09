@@ -480,6 +480,54 @@ span.text-primary {
     transition: all 1s ease-in;
 }
 
+#withdraw-dialog {
+    background: linear-gradient(0deg, #1A1B23, #1A1B23),
+linear-gradient(93.63deg, #484848 5.36%, rgba(72, 72, 72, 0.36) 47.78%, #484848 91.69%);
+
+}
+
+#withdraw-dialog .input-pls {
+    background: black;
+    padding: 4px 16px;
+    border-radius: 16px;
+    border: 1px solid;
+    border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
+}
+
+#withdraw-dialog .input-pls input {
+    outline: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+#withdraw-dialog .input-pls span.max {
+    padding-right: 8px;
+    border-right: 1px solid rgba(147, 30, 128, 1);
+}
+
+#withdraw-dialog .input-pls span.pls {
+    padding-left: 8px;
+}
+
+.withdraw-percentage-item {
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid rgba(185, 32, 237, 1);
+}
+
+.withdraw-percentage-item.active {
+    background: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
+}
+
+.btn-claim {
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid rgba(185, 32, 237, 1);
+}
+
 /** 
  *  Desktop
  */
@@ -499,10 +547,22 @@ span.text-primary {
     }
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /** 
  *  Tablet
  */
- /* @media screen and (max-width: 1264px) {
+/* @media screen and (max-width: 1264px) {
     #card-game {
         width: 70px;
         height: 100px;

@@ -88,3 +88,15 @@ function closeWinNFT() {
   winNFTEl.style.display = 'none';
   winNFTEl.pause();
 }
+
+function openWithDrawDialog() {
+  document.getElementById("withdraw-dialog").classList.remove("hidden");
+  document.getElementById("withdraw-dialog").classList.add("block");
+  document.body.style.overflow = "hidden";
+}
+
+function closeWithdrawDialog() {
+  document.getElementById("withdraw-dialog").classList.remove("block");
+  document.getElementById("withdraw-dialog").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
