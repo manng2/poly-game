@@ -58,18 +58,33 @@ function listenCloseButtonNotificationDialog() {
   })
 }
 
-function showWinNFT() {
+function showWinNFT(cardUrl) {
   const winNFTEl = document.getElementById('win-nft');
+  const winNFTOverlayEl = document.getElementById('win-nft-overlay');
   winNFTEl.style.display = 'block';
   winNFTEl.style.opacity = .5;
+  winNFTOverlayEl.style.display = 'block';
+  document.body.style.overflow = "hidden";
 
   const timeout = setInterval(() => {
     if (winNFTEl.style.opacity < 1) {
-      console.log('move', winNFTEl.style.opacity);
-      winNFTEl.style.opacity = parseFloat(winNFTEl.style.opacity) + 0.1;
+      winNFTEl.style.opacity = parseFloat(winNFTEl.style.opacity) + 0.01;
     } else {
       clearInterval(timeout);
     }
-  }, 1000)
+  }, 100)
   winNFTEl.play();
+
+  setTimeout(() => {
+    const winNFTImg = document.querySelector('#win-nft-overlay img');
+    winNFTImg.src = cardUrl || "assets/images/player-card/player-1/big.png";
+    winNFTImg.style.opacity = 1;
+  }, 5000);
+}
+
+function closeWinNFT() {
+  const winNFTEl = document.getElementById('win-nft');
+  document.body.style.overflow = "auto";
+  winNFTEl.style.display = 'none';
+  winNFTEl.pause();
 }
