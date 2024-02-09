@@ -1,3 +1,5 @@
+let outsideClickListener = null;
+
 function init() {
   const cardGames = Array.from(document.getElementsByClassName("card-game"));
   cardGames.forEach((it) => {
@@ -98,5 +100,28 @@ function openWithDrawDialog() {
 function closeWithdrawDialog() {
   document.getElementById("withdraw-dialog").classList.remove("block");
   document.getElementById("withdraw-dialog").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+function openRankingDialog() {
+  document.getElementById("overlay").classList.remove("hidden");
+  document.getElementById("overlay").classList.add("block");
+  document.getElementById("ranking-dialog").classList.remove("hidden");
+  document.getElementById("ranking-dialog").classList.add("flex");
+  document.body.style.overflow = "hidden";
+
+  const listener = document.body.addEventListener('click', function(event) {
+    if (!document.getElementById('ranking-dialog').contains(event.target)) {
+      closeRankingDialog();
+      document.body.removeEventListener('click', listener);
+    }
+  })
+}
+
+function closeRankingDialog() {
+  document.getElementById("ranking-dialog").classList.remove("flex");
+  document.getElementById("ranking-dialog").classList.add("hidden");
+  document.getElementById("overlay").classList.remove("block");
+  document.getElementById("overlay").classList.add("hidden");
   document.body.style.overflow = "auto";
 }
