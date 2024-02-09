@@ -450,6 +450,7 @@ span.text-primary {
     top: 0;
     left: 0;
     display: none;
+    z-index: 1000;
 }
 
 #win-nft-overlay {
@@ -469,6 +470,7 @@ span.text-primary {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 1s ease-in;
+    z-index: 1000;
 }
 
 #withdraw-dialog {

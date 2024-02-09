@@ -81,6 +81,7 @@ function showWinNFT(cardUrl) {
     const winNFTImg = document.querySelector('#win-nft-overlay img');
     winNFTImg.src = cardUrl || "assets/images/player-card/player-1/big.png";
     winNFTImg.style.opacity = 1;
+    winNFTImg.style.display = 'block';
   }, 5000);
 }
 
@@ -88,6 +89,10 @@ function closeWinNFT() {
   const winNFTEl = document.getElementById('win-nft');
   document.body.style.overflow = "auto";
   winNFTEl.style.display = 'none';
+  const winNFTOverlay = document.querySelector('#win-nft-overlay');
+  winNFTOverlay.style.display = 'none';
+  const winNFTImg = document.querySelector('#win-nft-overlay img');
+  winNFTImg.style.display = 'none';
   winNFTEl.pause();
 }
 
