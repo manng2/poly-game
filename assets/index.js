@@ -164,3 +164,43 @@ function closeHowToDialog() {
   document.getElementById("overlay").classList.add("hidden");
   document.body.style.overflow = "auto";
 }
+
+function openMessageDialog(title, message, isSuccess = false) {
+  document.getElementById("overlay").classList.remove("hidden");
+  document.getElementById("overlay").classList.add("block");
+  document.getElementById("message-dialog").classList.remove("hidden");
+  document.getElementById("message-dialog").classList.add("block");
+  document.getElementById("message-dialog-title").innerText = title;
+  document.getElementById("message-dialog-message").innerText = message;
+  document.body.style.overflow = "hidden";
+
+  if (isSuccess) {
+    document.getElementById("message-dialog").classList.add("success");
+    document.getElementById("message-dialog").classList.remove("failed");
+  } else {
+    document.getElementById("message-dialog").classList.add("failed");
+    document.getElementById("message-dialog").classList.remove("success");
+  }
+
+  const closeIconListener = document.getElementById('message-dialog-close-icon').addEventListener('click', function() {
+    closeMessageDialog();
+    document.body.removeEventListener('click', listener);
+    document.getElementById('message-dialog-close-icon').removeEventListener('click', closeIconListener);
+  })
+
+  const listener = document.body.addEventListener('click', function(event) {
+    if (!document.getElementById('message-dialog').contains(event.target)) {
+      closeMessageDialog();
+      document.body.removeEventListener('click', listener);
+      document.getElementById('message-dialog-close-icon').removeEventListener('click', closeIconListener);
+    }
+  })
+}
+
+function closeMessageDialog() {
+  document.getElementById("message-dialog").classList.remove("block");
+  document.getElementById("message-dialog").classList.add("hidden");
+  document.getElementById("overlay").classList.remove("block");
+  document.getElementById("overlay").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}

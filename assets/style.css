@@ -522,7 +522,8 @@ span.text-primary {
 }
 
 #ranking-dialog,
-#how-to-dialog {
+#how-to-dialog,
+#message-dialog {
     border: Mixed solid;
     border-image-source: linear-gradient(142.41deg, #2824E6 -12.51%, #E40FAC 136.14%);
     border-radius: 8px;
@@ -552,23 +553,17 @@ span.text-primary {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/** 
- *  Desktop
- */
-@media screen and (min-width: 1264px) {
-    #card-game {
-        width: 85px;
-        height: 120px;
-    }
+#message-dialog {
+    text-align: center;
+    padding: 16px 32px;
+}
 
-    .notification-dialog {
-        width: 600px;
-        height: 600px;
-    }
+#message-dialog.success {
+    background: rgb(6 255 11 / 30%);
+}
 
-    .wrapper {
-        padding: 16px;
-    }
+#message-dialog.failed {
+    background: rgb(255 6 6 / 30%);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -605,6 +600,31 @@ input[type=number] {
     font-size: 10px;
 }
 
+
+/** 
+ *  Desktop
+ */
+@media screen and (min-width: 1264px) {
+    #card-game {
+        width: 85px;
+        height: 120px;
+    }
+
+    .notification-dialog {
+        width: 600px;
+        height: 600px;
+    }
+
+    .wrapper {
+        padding: 16px;
+    }
+
+    #message-dialog {
+        width: 600px;
+    }
+}
+
+
 /** 
  *  Tablet
  */
@@ -629,7 +649,7 @@ input[type=number] {
  */
 @media screen and (max-width: 1264px) {
     #card-game {
-        width: 70x;
+        width: 70px;
         height: 100px;
     }
 
@@ -641,18 +661,22 @@ input[type=number] {
         height: 100%;
         object-fit: fill;
     }
+
+    #message-dialog {
+        width: 80%;
+    }
 }
 
-* div::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
-* div::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;
 }
 
-* div::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: rgba(147, 30, 128, .5);
     border-radius: 20px;
 }
